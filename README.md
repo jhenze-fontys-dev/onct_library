@@ -36,11 +36,11 @@ Print data to the terminal in a readable JSON format.
 
 #### Parameters
 
-**data**
+**data : dict | list**
 
 Data object to display.
 
-**max_characters**
+**max_characters : int**
 
 Maximum number of characters displayed.
 
@@ -58,11 +58,11 @@ Save data to a JSON file.
 
 #### Parameters
 
-**data**
+**data : dict | list**
 
 Data object to save.
 
-**filename**
+**filename : str**
 
 Destination filename.
 
@@ -80,7 +80,7 @@ Load data from a JSON file.
 
 #### Parameters
 
-**filename**
+**filename : str**
 
 Source filename.
 
@@ -95,30 +95,29 @@ Loaded data object.
 ---
 
 ### json_to_dataframe(
-
-data,
-record_path=None,
-numeric_columns=None,
-datetime_columns=None
+    data,
+    record_path=None,
+    numeric_columns=None,
+    datetime_columns=None
 )
 
 Convert structured data into a pandas DataFrame.
 
 #### Parameters
 
-**data**
+**data : dict | list**
 
 Source data.
 
-**record_path**
+**record_path : str | None**
 
 Optional key containing records that should become rows in the DataFrame.
 
-**numeric_columns**
+**numeric_columns : list[str] | None**
 
 Optional list of columns that should be converted to numeric values.
 
-**datetime_columns**
+**datetime_columns : list[str] | None**
 
 Optional list of columns that should be converted to datetime values.
 
@@ -144,7 +143,7 @@ Store an API key for accessing stock market data.
 
 #### Parameters
 
-**api_key**
+**api_key : str**
 
 Valid API key.
 
@@ -162,7 +161,7 @@ Retrieve quote information for one or more stock symbols.
 
 #### Parameters
 
-**symbols**
+**symbols : str | list[str]**
 
 Stock symbol or list of stock symbols.
 
@@ -182,11 +181,11 @@ Retrieve historical stock data.
 
 #### Parameters
 
-**symbols**
+**symbols : str | list[str]**
 
 Stock symbol or list of stock symbols.
 
-**period**
+**period : str**
 
 Requested time period.
 
@@ -279,7 +278,7 @@ Select a column from a DataFrame.
 
 #### Parameters
 
-**column_name**
+**column_name : str**
 
 Name of the column.
 
